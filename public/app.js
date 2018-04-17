@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   const mapContainer = document.querySelector('#main-map');
 
@@ -11,4 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
   mainMap.addMarker(ccGlasgow, 'CodeClan Glasgow');
 
   mainMap.addClickListener();
+
+  const moveToPerthButton = document.querySelector('#take_to_perth')
+  moveToPerthButton.addEventListener('click', function () {
+    console.log('click');
+    mainMap.googleMap.setCenter({lat: -31.950527, lng: 115.860457});
+  });
 });
