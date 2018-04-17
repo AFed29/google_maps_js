@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const ccEdinburgh = {lat: 55.946962, lng: -3.201958};
   const ccGlasgow = {lat:55.865477, lng:-4.257998}
-  mainMap.addMarker(ccEdinburgh);
-  mainMap.addMarker(ccGlasgow);
+  mainMap.addMarker(ccEdinburgh, 'CodeClan Edinburgh');
+  mainMap.addMarker(ccGlasgow, 'CodeClan Glasgow');
 
   mainMap.addClickListener();
 });
