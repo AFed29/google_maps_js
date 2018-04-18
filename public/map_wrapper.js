@@ -10,7 +10,7 @@ const MapWrapper = function (container, mapStart, zoomLevel) {
 
 let count = 0;
 
-MapWrapper.prototype.addMarker = function (coords, placeInfo) {
+MapWrapper.prototype.addMarker = function (coords, placeInfo = "") {
   count++
   const marker = new google.maps.Marker({
     map: this.googleMap,

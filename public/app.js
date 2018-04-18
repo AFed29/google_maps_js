@@ -20,9 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const whereAmIButton = document.querySelector('#where_am_i');
   whereAmIButton.addEventListener('click', function () {
-    console.log('click');
-    navigator.geolocation.getCurrentPosition(function(position) {
-      console.log(position.coords.latitude, position.coords.longitude);
+    navigator.geolocation.getCurrentPosition((position) => {
       mainMap.googleMap.setCenter({lat: position.coords.latitude, lng: position.coords.longitude});
     });
   });
